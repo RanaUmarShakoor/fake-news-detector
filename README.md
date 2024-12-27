@@ -1,6 +1,3 @@
-Here’s a professional and detailed `README.md` file for your project:
-
-```markdown
 # Fake News Detection Using LSTM
 
 This project implements a deep learning model to classify news articles as **REAL** or **FAKE** using text analysis. The model leverages the TensorFlow library and an LSTM-based architecture to capture the sequential patterns in text data.
@@ -9,13 +6,13 @@ This project implements a deep learning model to classify news articles as **REA
 
 - [Introduction](#introduction)
 - [Dataset](#dataset)
+- [Project Files](#project-files)
 - [Project Workflow](#project-workflow)
 - [Model Architecture](#model-architecture)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
 - [Results](#results)
 - [Future Improvements](#future-improvements)
-- [License](#license)
 
 ---
 
@@ -31,7 +28,14 @@ The dataset is expected to contain the following columns:
 - `text`: The content of the news article.
 - `label`: The classification label, either "REAL" or "FAKE".
 
-You can use any labeled dataset for fake news detection. Make sure it is saved as a CSV file (e.g., `news.csv`).
+The dataset file should be named `news.csv` and placed in the project directory.
+
+---
+
+## Project Files
+
+- **`main.ipynb`**: A Jupyter Notebook containing all the code for preprocessing, training, evaluation, and visualization.
+- **`news.csv`**: The dataset file containing the news articles and their respective labels.
 
 ---
 
@@ -79,7 +83,7 @@ You can use any labeled dataset for fake news detection. Make sure it is saved a
 
 - Python 3.8+
 - TensorFlow 2.0+
-- Required Python libraries: `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`
+- Required Python libraries: `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `jupyter`
 
 ### Installation
 
@@ -88,36 +92,39 @@ You can use any labeled dataset for fake news detection. Make sure it is saved a
    git clone https://github.com/yourusername/fake-news-detection-lstm.git
    cd fake-news-detection-lstm
    ```
-
+   
 2. Install the required libraries:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Place your dataset (`news.csv`) in the project directory.
+3. Place your dataset file (`news.csv`) in the project directory.
+
+4. Launch the Jupyter Notebook:
+   ```bash
+   jupyter notebook main.ipynb
+   ```
 
 ---
 
 ## Usage
 
-1. Preprocess the data and train the model:
-   ```bash
-   python train_model.py
-   ```
+1. Open the `main.ipynb` file in Jupyter Notebook.
 
-2. Evaluate the model and visualize the results:
-   ```bash
-   python evaluate_model.py
-   ```
+2. Follow the code blocks to:
+   - Preprocess the data
+   - Train the model
+   - Evaluate the model
+   - Visualize the results
 
-3. View the confusion matrices and accuracy charts in the output.
+3. View the confusion matrices and accuracy charts in the notebook output.
 
 ---
 
 ## Results
 
-- **Development Set Accuracy**: _e.g., 82.46%_
-- **Test Set Accuracy**: _e.g., 79.34%_
+- **Development Set Accuracy**: 82.46%
+- **Test Set Accuracy**: 79.34%
 
 Confusion matrices and accuracy comparison charts are generated during evaluation for better insights.
 
@@ -135,13 +142,6 @@ Confusion matrices and accuracy comparison charts are generated during evaluatio
 
 ## Acknowledgments
 
+- Dataset source: [DataFlair's Advanced Python Project: Detecting Fake News](https://data-flair.training/blogs/advanced-python-project-detecting-fake-news/).
 - TensorFlow and Keras libraries for model implementation.
 - Matplotlib and Seaborn for data visualization.
-```
-
-### Notes:
-- Replace `yourusername` with your GitHub username.
-- Create a `requirements.txt` file with the project dependencies (e.g., TensorFlow, numpy, pandas, etc.).
-- Add any dataset source or acknowledgments as necessary.
-
-Let me know if you need further customizations!
